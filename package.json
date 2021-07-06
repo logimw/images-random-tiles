@@ -1,0 +1,27 @@
+{
+  "name": "icea-about",
+  "version": "1.0.0",
+  "description": "JS element",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build"
+  },
+  "author": "Mateusz Wójcik",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^6.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.5"
+  }
+}

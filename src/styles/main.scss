@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes flip {
+  from {
+    opacity: .1;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+}
+
+.container {
+  margin-top: 10rem;
+}
+
+.about-us-tiles {
+  &__item {
+    max-width: 192px;
+    height: 220px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 300ms ease;
+      object-fit: cover;
+    }
+    img.flip {
+      animation-duration: 700ms;
+      animation-name: flip;
+    }
+  }
+}
+
+
+@media (max-width: 578px) {
+  .about-us-tiles__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about-us-tiles__item {
+    grid-template-columns: repeat(2, 1fr);
+    height: 150px;
+  }
+}
+
